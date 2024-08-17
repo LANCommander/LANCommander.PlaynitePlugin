@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-	<RuntimeIdentifiers>win</RuntimeIdentifiers>
+    <RuntimeIdentifiers>win</RuntimeIdentifiers>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -23,15 +23,9 @@
     <VersionFileName>$(BaseIntermediateOutputPath)Version.cs</VersionFileName>
   </PropertyGroup>
   <Target Name="GenerateVersionFile" BeforeTargets="BeforeBuild">
-    <WriteLinesToFile
-        File="$(VersionFileName)"
-        Overwrite="True"
-        Lines="
-            [assembly: System.Reflection.AssemblyVersion(&quot;$(Version)&quot;)]
-            [assembly: System.Reflection.AssemblyFileVersion(&quot;$(Version)&quot;)]
-            [assembly: System.Reflection.AssemblyInformationalVersion(&quot;$(InformationalVersion)&quot;)]" />
+    <WriteLinesToFile File="$(VersionFileName)" Overwrite="True" Lines="&#xD;&#xA;            [assembly: System.Reflection.AssemblyVersion(&quot;$(Version)&quot;)]&#xD;&#xA;            [assembly: System.Reflection.AssemblyFileVersion(&quot;$(Version)&quot;)]&#xD;&#xA;            [assembly: System.Reflection.AssemblyInformationalVersion(&quot;$(InformationalVersion)&quot;)]" />
     <ItemGroup>
-        <Compile Include="$(VersionFileName)" />
+      <Compile Include="$(VersionFileName)" />
     </ItemGroup>
   </Target>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -127,7 +121,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <None Include="Localization\*.xaml">
-	  <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -155,10 +149,6 @@
     <ProjectReference Include="..\LANCommander.SDK\LANCommander.SDK.csproj">
       <Project>{4c2a71fd-a30b-4d62-888a-4ef843d8e506}</Project>
       <Name>LANCommander.SDK</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SharpCompress\src\SharpCompress\SharpCompress.csproj">
-      <Project>{cb30eccd-0144-4e37-b5b9-111e45fbdafc}</Project>
-      <Name>SharpCompress</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

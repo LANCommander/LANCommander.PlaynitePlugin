@@ -1,8 +1,0 @@
-﻿@page "/Files"
-@attribute [Authorize(Roles = "Administrator")]
-
-<FileManager WorkingDirectory="@RootPath" />
-
-@code {
-    string RootPath = Path.GetPathRoot(Directory.GetCurrentDirectory());
-}

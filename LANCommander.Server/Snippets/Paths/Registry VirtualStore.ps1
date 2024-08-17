@@ -1,1 +1,0 @@
-﻿$VirtualStore = "registry::\HKEY_CURRENT_USER\Software\Classes\VirtualStore\MACHINE\SOFTWARE"

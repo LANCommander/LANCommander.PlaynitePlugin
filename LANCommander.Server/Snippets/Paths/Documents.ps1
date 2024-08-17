@@ -1,1 +1,0 @@
-﻿$Documents = [Environment]::GetFolderPath('MyDocuments')

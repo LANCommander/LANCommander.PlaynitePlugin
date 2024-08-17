@@ -1,1 +1,0 @@
-﻿"Hello, world!" | Out-File -FilePath "file.txt" -Encoding ASCII -NoNewLine

@@ -1,1 +1,0 @@
-﻿$AppData = [Environment]::GetFolderPath('ApplicationData')
